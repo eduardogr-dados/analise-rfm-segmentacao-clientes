@@ -28,8 +28,9 @@
 ## Estrutura do Repositório
 ```
 /
-├── data/         # Contém o dataset bruto (Online Retail.xlsx)
-├── notebooks/    # Notebook Jupyter com a análise completa
+├── data/        # Contém o dataset bruto (Online Retail.xlsx)
+├── assets/      # Gráficos para o arquivo README
+├── notebook/    # Notebook Jupyter com a análise completa
 └── README.md
 ```
 
