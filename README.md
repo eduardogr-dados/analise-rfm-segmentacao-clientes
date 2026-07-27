@@ -88,7 +88,7 @@ Uma análise descritiva foi realizada nos 44 clientes de atacado. Destaques:
 
 A página **Parceiros Estratégicos no Atacado em Risco** detalha os clientes inativos, seu valor monetário individual, tempo de inatividade e localização geográfica.
 
-![Parceiros Estratégicos no Atacado em Risco](Atacado_Risco.png)
+![Parceiros Estratégicos no Atacado em Risco](assets/Atacado_Risco.png)
 
 ## Conclusão
 - **Resultados-chave**: O projeto validou que a base de clientes é composta por dois mundos distintos, Varejo e Atacado, cada um com seus próprios padrões e necessidades. No varejo, foram identificados 4 segmentos acionáveis. No atacado, foi revelado um pequeno grupo de clientes de altíssimo impacto, operando como parceiros estratégicos.
