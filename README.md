@@ -61,23 +61,34 @@
 - A perda de 25% dos dados devido a `CustomerID`s ausentes pode introduzir um viés se esses clientes tiverem um perfil de compra diferente dos clientes registrados.
 
 ## Análise
-### Tópico de Análise 1: Segmentação do Varejo com K-Means
+
+### Tópico 1: Segmentação do Varejo com K-Means
+
 Após a separação estratégica do segmento de atacado, o algoritmo K-Means foi aplicado na base de varejo. A combinação do Método do Cotovelo e da Análise de Silhueta indicou K=4 como o número ideal de clusters. Principais descobertas:
-  - **Campeões (827 clientes):** A elite do varejo, com altíssima frequência e valor. Perfil: R=15, F=11, M=£4,154.
-  - **Clientes Ativos (1.165 clientes):** A base sólida do negócio, com bom valor, mas precisando de estímulos. Perfil: R=81, F=4, M=£1,479.
-  - **Promissores (819 clientes):** Clientes novos ou recentes com alto potencial de crescimento. Perfil: R=19, F=2, M=£512.
-  - **Hibernando (1.478 clientes):** O maior grupo, composto por clientes inativos e com alto risco de perda. Perfil: R=188, F=1, M=£308.
 
-![Gráfico dos Segmentos de Varejo](assets/6-1_Gráficos_Comparativos_Clusters_boxplot.png)
+| Segmento            | Clientes | R        | F   | M      | Perfil                                                                   |
+| ------------------- | -------- | -------- | --- | ------ | ------------------------------------------------------------------------ |
+| **Campeões**        | 827      | 15 dias  | 11x | £4.154 | Elite do varejo, com altíssima frequência e valor.                       |
+| **Clientes Ativos** | 1.165    | 81 dias  | 4x  | £1.479 | Base sólida do negócio, com bom valor, mas precisando de estímulos.      |
+| **Promissores**     | 819      | 19 dias  | 2x  | £512   | Clientes novos ou recentes com alto potencial de crescimento.            |
+| **Hibernando**      | 1.478    | 188 dias | 1x  | £308   | O maior grupo, composto por clientes inativos e com alto risco de perda. |
 
-### Tópico de Análise 2: Análise do Segmento de Atacado
+Os resultados foram consolidados em um relatório no Power BI. A página **Perfil de Clientes** apresenta uma visão executiva dos segmentos, com KPIs globais, distribuição de clientes, receita por segmento, tempo de inatividade e a relação entre valor monetário e engajamento por cliente.
+
+![Perfil de Clientes](assets/Perfil_Clientes.png)
+
+### Tópico 2: Análise do Segmento de Atacado
+
 Uma análise descritiva foi realizada nos 44 clientes de atacado. Destaques:
-  - **Impacto Estratégico:** Este 1% da base de clientes é responsável por **32% do faturamento total** da empresa.
-  - **Modelo de Distribuição:** O padrão de 1-2 clientes por país internacional sugere um modelo de negócio B2B com parceiros de distribuição exclusivos.
-  - **Padrões de Compra:** Não há um padrão único; existem clientes **"Especialistas"** (alto volume de poucos produtos) e **"Generalistas"** (ampla variedade de itens).
-  - **Risco Financeiro:** Foi identificado que **9,26%** da receita do atacado está em risco devido à inatividade de apenas 5 clientes.
 
-![Gráfico do Perfil Descritivo RFM do Atacado](assets/7-1_Perfil_RFM_Atacado.png)
+- **Impacto Estratégico:** Este 1% da base de clientes é responsável por **32% do faturamento total** da empresa.
+- **Modelo de Distribuição:** O padrão de 1-2 clientes por país internacional sugere um modelo de negócio B2B com parceiros de distribuição exclusivos.
+- **Padrões de Compra:** Não há um padrão único; existem clientes **"Especialistas"** (alto volume de poucos produtos) e **"Generalistas"** (ampla variedade de itens).
+- **Risco Financeiro:** Foi identificado que **9,26%** da receita do atacado está em risco devido à inatividade de apenas 5 clientes, representando **£263.764** em receita comprometida.
+
+A página **Parceiros Estratégicos no Atacado em Risco** detalha os clientes inativos, seu valor monetário individual, tempo de inatividade e localização geográfica.
+
+![Parceiros Estratégicos no Atacado em Risco](Atacado_Risco.png)
 
 ## Conclusão
 - **Resultados-chave**: O projeto validou que a base de clientes é composta por dois mundos distintos, Varejo e Atacado, cada um com seus próprios padrões e necessidades. No varejo, foram identificados 4 segmentos acionáveis. No atacado, foi revelado um pequeno grupo de clientes de altíssimo impacto, operando como parceiros estratégicos.
